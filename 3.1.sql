@@ -1,0 +1,17 @@
+show databases;
+create database p3;
+use p3;
+create table tb1(rno int,name varchar(10),marks int);
+insert into tb1 values(503 ,'Suma', 40);
+insert into tb1 values(504,'Raju', 70),(505,'Ramu',45),(501,'Abhi',50 ),(502,'Ravi',60 );
+create table tb2(rno int,fee int);
+insert into tb2 values(501,150000),(502,5000),(503 ,10000),(504 ,25000);
+select * from tb1;
+select * from tb2;
+select *from tb1 join tb2 on tb1.rno=tb2.rno;
+select * from tb1 left outer join tb2 on tb1.rno=tb2.rno; 
+select * from tb1 right outer join tb2 on tb1.rno=tb2.rno;
+select *from tb1 natural join tb2;
+select * from tb1,tb2;  
+select t1.rno, t2.name from tb1 t1,tb1 t2 where t1.rno=t2.rno;
+select * from tb1,tb2 where tb1.rno=tb2.rno;
