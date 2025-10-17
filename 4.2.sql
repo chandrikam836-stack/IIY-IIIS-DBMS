@@ -1,0 +1,19 @@
+show databases;
+use s4;
+CREATE TABLE Stds (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Dept VARCHAR(10)
+);
+INSERT INTO Sts VALUES (101, 'Ravi', 'CSE');
+INSERT INTO Sts VALUES (102, 'Anita', 'ECE');
+COMMIT;
+INSERT INTO Sts VALUES (103, 'Mahesh', 'IT');
+SAVEPOINT sp1;  
+INSERT INTO Sts VALUES (104, 'Sita', 'EEE');
+SAVEPOINT sp2; 
+INSERT INTO Sts VALUES (105, 'Kiran', 'MECH');
+SELECT * FROM Sts;
+ROLLBACK TO sp1;
+COMMIT;
+SELECT * FROM Sts;
